@@ -6,7 +6,7 @@ import {RegisterScreen} from "../../Screens/Auth/RegisterScreen";
 import {PrivacyScreen} from "../../Screens/Auth/PrivacyScreen";
 
 
-export const AuthNavigator = ({ navigation }) =>
+export const AuthNavigator = ({}) =>
 {
     const Stack = createStackNavigator();
 

@@ -3,8 +3,12 @@ import { View, ImageBackground, Text, TouchableOpacity } from "react-native";
 import { styles } from "../../Theme/appTheme";
 import { localImages } from "../../Assets/assets";
 import { Ionicons } from "@expo/vector-icons";
+import {useNavigation} from "@react-navigation/core";
 
-export const NavigationHeader  = ({ title, navigation }) => {
+export const NavigationHeader  = ({ title }) =>
+{
+
+    const navigation = useNavigation();
 
     return (
         <View

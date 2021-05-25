@@ -9,10 +9,12 @@ import Carousel, { Pagination } from 'react-native-snap-carousel';
 
 import { packagesData } from "../../../Data/PackagesData";
 import {CustomButton} from "../../../Components/Atoms/CustomButton";
+import {useNavigation} from "@react-navigation/core";
 
 
-export const ATAPackageScreen = ({ navigation }) =>
+export const ATAPackageScreen = ({ }) =>
 {
+    const navigation = useNavigation();
     const { width: windowWidth } = Dimensions.get('window');
 
     const [selectedPackage, setSelectedPackage] = useState(packagesData[0].name);

@@ -11,8 +11,9 @@ import {ConsultCard} from "../../../Components/Organisms/ConsultCard";
 
 import { blogs } from "../../../mocks/BlogNotesMock";
 import {Ionicons} from "@expo/vector-icons";
+import {useNavigation} from "@react-navigation/core";
 
-export const ConsultScreen = ({navigation}) =>
+export const ConsultScreen = ({ navigation   }) =>
 {
     const customPickerStyles = StyleSheet.create({
         inputIOS: {
@@ -39,7 +40,6 @@ export const ConsultScreen = ({navigation}) =>
             backgroundColor: colors.secondary
         },
     });
-
     const [category, setCategory] = useState();
 
 
@@ -64,16 +64,24 @@ export const ConsultScreen = ({navigation}) =>
                 }}>
 
                     <RNPickerSelect
-                        onValueChange={(value) => setCategory(value) }
+                        onValueChange={
+                            async (value) => {
+                            await setCategory(value)
+                            }
+                        }
                         placeholder={{
                             label: 'Elige una categoría...',
                             value: null,
                         }}
+
                         items={[
                             {label: 'Categoría 1', value: 'Categoría 1'},
                             {label: 'Categoría 2', value: 'Categoría 2'},
                             {label: 'Categoría 3', value: 'Categoría 3'},
                         ]}
+
+                        value={ category }
+
 
                         Icon={() => {
                             return <Ionicons name="caret-down" size={24} color="white" />;
@@ -114,16 +122,23 @@ export const ConsultScreen = ({navigation}) =>
         );
     }
 
-
     const renderItems = (item) => {
         return(
-          <ConsultCard title={ item.title } abstract={ item.abstract } headerImage={ item.coverImageUrl } />
+
+          <ConsultCard
+              title={ item.title }
+              abstract={ item.abstract }
+              headerImage={ item.coverImageUrl }
+              item={ item }
+          />
+
         );
     }
 
 
     return (
         <View style={styles.mainContainer}>
+
             <Header/>
 
             <ImageBackground

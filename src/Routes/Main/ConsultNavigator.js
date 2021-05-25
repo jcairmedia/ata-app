@@ -2,6 +2,7 @@ import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {Text} from "react-native";
 import {ConsultScreen} from "../../Screens/Main/Consult/ConsultScreen";
+import {ConsultEntry} from "../../Screens/Main/Consult/ConsultEntry";
 
 export const ConsultNavigator  = () =>
 {
@@ -12,7 +13,8 @@ export const ConsultNavigator  = () =>
             screenOptions={{
                 headerShown: false
             }}>
-            <Stack.Screen name="ContactScreen" component={ ConsultScreen } />
+            <Stack.Screen name="ConsultScreen" component={ ConsultScreen } />
+            <Stack.Screen name="ConsultEntry" component={ ConsultEntry } />
         </Stack.Navigator>
     );
 }

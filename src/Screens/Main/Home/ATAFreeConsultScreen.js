@@ -7,9 +7,13 @@ import { localImages } from "../../../Assets/assets";
 import { CustomEntry } from "../../../Components/Atoms/CustomEntry";
 import { Hyperlink } from "../../../Components/Atoms/Hyperlink";
 import { CustomButton } from "../../../Components/Atoms/CustomButton";
+import {useNavigation} from "@react-navigation/core";
 
-export const ATAFreeConsultScreen = ({ navigation }) =>
+export const ATAFreeConsultScreen = ({ }) =>
 {
+
+    const navigation = useNavigation();
+
     const getFreeConsult = () => {
         navigation.navigate('ConfirmScreen', {type: 'freeConsult'});
     }

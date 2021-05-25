@@ -9,7 +9,7 @@ import {CustomTitle} from "../../Components/Atoms/CustomTitle";
 import {Hyperlink} from "../../Components/Atoms/Hyperlink";
 import {CustomButton} from "../../Components/Atoms/CustomButton";
 
-export const RegisterScreen = ({ navigation }) =>
+export const RegisterScreen = () =>
 {
     return(
         <View style={{
@@ -18,7 +18,7 @@ export const RegisterScreen = ({ navigation }) =>
         }}>
 
             <View style={ styles.mainContainer }>
-                <NavigationHeader title={' Registro '} navigation={ navigation }/>
+                <NavigationHeader title={' Registro '} />
             </View>
 
             <View style={{

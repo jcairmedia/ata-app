@@ -1,10 +1,15 @@
 import React from "react";
 import {View, Text, Image, TouchableOpacity} from "react-native";
 import {colors, styles} from "../../Theme/appTheme";
-import {localImages} from "../../Assets/assets";
-import {CustomButton} from "../Atoms/CustomButton";
+import {useNavigation} from "@react-navigation/core";
+import {ConsultEntry} from "../../Screens/Main/Consult/ConsultEntry";
 
-export const ConsultCard = ({headerImage, title, abstract}) => {
+export const ConsultCard = ({ headerImage, title, abstract, item }) =>
+{
+    const navigation = useNavigation();
+
+    const itemString = JSON.stringify(item);
+    const itemParsed = JSON.parse(itemString);
 
     return (
         <View
@@ -45,7 +50,7 @@ export const ConsultCard = ({headerImage, title, abstract}) => {
 
                 <Text style={{ ...styles.mainTitle }}> { title } </Text>
                 <Text> {} </Text>
-                <Text> {abstract} </Text>
+                <Text> { abstract } </Text>
             </View>
 
             <View style={{
@@ -61,12 +66,15 @@ export const ConsultCard = ({headerImage, title, abstract}) => {
                         marginHorizontal: 10,
                         marginBottom: 5,
                         borderRadius: 5
-                    }}>
+                    }}
+                    onPress={ () => navigation.navigate('ConsultEntry', itemParsed) }
+                >
                     <Text style={{
                         color: 'white',
                     }}>
                         Ver más
                     </Text>
+
                 </TouchableOpacity>
             </View>
         </View>

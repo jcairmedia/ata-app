@@ -8,9 +8,11 @@ import { CustomButton } from "../../Components/Atoms/CustomButton";
 import { Hyperlink } from "../../Components/Atoms/Hyperlink";
 import { CustomEntry } from "../../Components/Atoms/CustomEntry";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import {useNavigation} from "@react-navigation/core";
 
-export const LoginScreen = ({ navigation }) => {
+export const LoginScreen = ({}) => {
 
+    const navigation = useNavigation();
     let ScreenHeight = Dimensions.get("window").height;
 
     const getLogin = () => {
