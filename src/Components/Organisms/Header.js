@@ -9,7 +9,8 @@ export const Header  = () => {
         <View
             style={{
             ...styles.mainContainer,
-            maxHeight: 100
+            maxHeight: 100,
+            minHeight: 100,
         }}>
             <ImageBackground
                 source={ localImages.backgroundHeader }

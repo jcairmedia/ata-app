@@ -131,5 +131,10 @@ export const styles = StyleSheet.create
         fontSize: 25
     },
 
+    consultCard: {
+        flex: 1,
+
+    },
+
 
 });

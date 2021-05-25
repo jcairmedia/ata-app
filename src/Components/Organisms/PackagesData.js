@@ -1,8 +1,8 @@
 import React from "react";
 
-import {ScrollView, View, Text, StyleSheet, Dimensions} from "react-native";
-import {Hyperlink} from "../Atoms/Hyperlink";
-import {colors, styles} from "../../Theme/appTheme";
+import { ScrollView, View, Text, StyleSheet } from "react-native";
+import { Hyperlink } from "../Atoms/Hyperlink";
+import { colors, styles } from "../../Theme/appTheme";
 import RNPickerSelect from "react-native-picker-select";
 
 export const PackagesData = ({title, cost, benefits}) =>
