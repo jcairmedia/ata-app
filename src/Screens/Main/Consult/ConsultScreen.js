@@ -7,11 +7,10 @@ import {CustomTitle} from "../../../Components/Atoms/CustomTitle";
 import RNPickerSelect from "react-native-picker-select";
 
 import {CustomSubtitle} from "../../../Components/Atoms/CustomSubtitle";
-import {ConsultCard} from "../../../Components/Organisms/ConsultCard";
 
 import { blogs } from "../../../mocks/BlogNotesMock";
 import {Ionicons} from "@expo/vector-icons";
-import {useNavigation} from "@react-navigation/core";
+import {ConsultCard} from "../../../Components/Molecules/ConsultCard";
 
 export const ConsultScreen = ({ navigation   }) =>
 {
@@ -123,6 +122,7 @@ export const ConsultScreen = ({ navigation   }) =>
     }
 
     const renderItems = (item) => {
+
         return(
 
           <ConsultCard

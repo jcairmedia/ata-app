@@ -32,11 +32,11 @@ export const MainNavigator = () =>
                                     : 'home-outline';
                                 break;
 
-                            case 'ContactNavigator':
+                            case 'ConsultNavigator':
                                 iconName =
                                     focused
-                                    ? 'ios-mail-sharp'
-                                    : 'ios-mail-outline';
+                                    ? 'book'
+                                    : 'book-outline';
                                 break;
 
                             case 'ProfileNavigator':
