@@ -18,8 +18,8 @@ export const ProfileScreen = () =>
         {
             id: '123456',
             icon: 'grid',
-            title: 'Mis Planes',
-            navigateTo: 'PlansScreen',
+            title: 'Mis Paquetes',
+            navigateTo: 'PackagesScreen',
         },
         {
             id: '123457',

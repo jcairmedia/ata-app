@@ -12,7 +12,8 @@ export const ListHeader = ({ title }) =>
             <Text style={{
                 ...styles.mainTitle,
                 fontSize: 25,
-                marginVertical: 10
+                marginTop: 10,
+                marginBottom: 30,
             }}>
                 { title }
             </Text>
