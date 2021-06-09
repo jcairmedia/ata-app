@@ -19,6 +19,7 @@ export const localImages = {
     freeConsult: require('./guia_gratuita.png'),
     paymentConsult: require('./asesoria_pago.png'),
     packages: require('./fondo_paquetes.png'),
+    packagesBanner: require('./plan_background.jpg'),
 
     slide01: require('./slide_01.png'),
     slide02: require('./slide_02.png'),

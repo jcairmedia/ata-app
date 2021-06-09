@@ -12,8 +12,8 @@ export const RootNavigator = () =>
                screenOptions={{
                headerShown: false
            }}>
-               <Stack.Screen name="AuthNavigator" component={AuthNavigator} />
                <Stack.Screen name="MainNavigator" component={MainNavigator} />
+               <Stack.Screen name="AuthNavigator" component={AuthNavigator} />
            </Stack.Navigator>
    );
 
